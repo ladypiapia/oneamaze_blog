@@ -13,11 +13,13 @@ import {
   TelegramIcon,
   TwitterIcon,
   YouTubeIcon,
+  MPWechatIcon,
 } from '~/assets'
 import { Tooltip } from '~/components/ui/Tooltip'
 
 type IconType = (props: IconProps) => JSX.Element
 type Platform =
+  | 'mpwechat'
   | 'github'
   | 'twitter'
   | 'youtube'
@@ -51,6 +53,11 @@ const iconMapper: { [key: string]: PlatformInfo } = {
     icon: BilibiliIcon,
     platform: 'bilibili',
     label: '哔哩哔哩',
+  },
+  '(?:oneamaze.com)': {
+    icon: MPWechatIcon,
+    platform: 'mpwechat',
+    label: '微信公众号',
   },
   '(?:mailto:)': { icon: MailIcon, platform: 'mail', label: '邮箱地址' },
   '(?:feed.xml)': { icon: AtomIcon, platform: 'rss', label: 'RSS 订阅' },
