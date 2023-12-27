@@ -103,6 +103,11 @@ export function Headline() {
           platform="twitter"
         />
         <SocialLink
+          href="https://oneamaze.com"
+          aria-label="我的公众号"
+          platform="mpwechat"
+        />
+        <SocialLink
           href="https://cali.so/youtube"
           aria-label="我的 YouTube"
           platform="youtube"
